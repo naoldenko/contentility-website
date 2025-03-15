@@ -10,11 +10,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "ContentilityAI - Intelligent Content Solutions",
-  description: "ContentilityAI helps you create, manage, and optimize your content with the power of artificial intelligence.",
+  title: "ContentilityAI",
+  description: "ContentilityAI is an affordable, repurposing content app that transforms your existing content into multiple formats with just a few clicks.",
   icons: [
     { rel: 'icon', url: '/favicon.svg', type: 'image/svg+xml' },
-    { rel: 'icon', url: '/contentility.png', type: 'image/png' },
     { rel: 'apple-touch-icon', url: '/contentility.png' },
   ],
 };
@@ -28,7 +27,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/contentility.png" type="image/png" />
         <link rel="apple-touch-icon" href="/contentility.png" />
       </head>
       <body
