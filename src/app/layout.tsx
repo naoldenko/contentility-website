@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,16 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQC7Z44JGM"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-TQC7Z44JGM');
-          `
-        }} />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/contentility.png" />
       </head>
@@ -43,6 +34,20 @@ export default function RootLayout({
         className={`${poppins.variable} antialiased`}
       >
         {children}
+        
+        {/* Google tag (gtag.js) */}
+        <Script 
+          src="https://www.googletagmanager.com/gtag/js?id=G-TQC7Z44JGM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TQC7Z44JGM');
+          `}
+        </Script>
       </body>
     </html>
   );
