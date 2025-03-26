@@ -25,6 +25,8 @@ jobs:
         run: npm run build
       - name: Create .nojekyll file
         run: touch ./out/.nojekyll
+      - name: Copy CNAME file
+        run: cp CNAME ./out/CNAME
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:
