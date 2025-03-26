@@ -17,7 +17,7 @@ const config: Config = {
         background: "#3066be",
       },
       fontFamily: {
-        sans: ["var(--font-poppins)", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
