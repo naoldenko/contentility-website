@@ -16,6 +16,34 @@ export const metadata: Metadata = {
     { rel: 'icon', url: '/favicon.svg', type: 'image/svg+xml' },
     { rel: 'apple-touch-icon', url: '/contentility.png' },
   ],
+  metadataBase: new URL("https://contentility.com"),
+  openGraph: {
+    title: "ContentilityAI",
+    description: "making content versatile",
+    images: [
+      {
+        url: "/contentility.png",
+        width: 800,
+        height: 600,
+        alt: "ContentilityAI logo",
+      }
+    ],
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ContentilityAI",
+    description: "making content versatile",
+    images: ["/contentility.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
