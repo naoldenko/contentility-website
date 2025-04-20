@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "making content versatile",
     images: [
       {
-        url: "/contentility.png",
+        url: "https://contentility.com/contentility.png",
         width: 800,
         height: 600,
         alt: "ContentilityAI logo",
@@ -30,12 +30,28 @@ export const metadata: Metadata = {
     ],
     locale: "en_CA",
     type: "website",
+    siteName: "ContentilityAI",
   },
   twitter: {
     card: "summary_large_image",
     title: "ContentilityAI",
     description: "making content versatile",
-    images: ["/contentility.png"],
+    images: ["https://contentility.com/contentility.png"],
+  },
+  other: {
+    'instagram:card': 'summary_large_image',
+    'instagram:title': 'ContentilityAI',
+    'instagram:description': 'making content versatile',
+    'instagram:image': 'https://contentility.com/contentility.png',
+    'instagram:image:alt': 'ContentilityAI logo',
+    
+    'linkedin:card': 'summary_large_image',
+    'linkedin:title': 'ContentilityAI',
+    'linkedin:description': 'making content versatile',
+    'linkedin:image': 'https://contentility.com/contentility.png',
+    'linkedin:image:alt': 'ContentilityAI logo',
+    'og:image:width': '800',
+    'og:image:height': '600'
   },
   robots: {
     index: true,
@@ -56,6 +72,15 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/contentility.png" />
+        
+        {/* LinkedIn and Instagram specific meta tags */}
+        <meta property="og:image" content="https://contentility.com/contentility.png" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:title" content="ContentilityAI" />
+        <meta property="og:description" content="making content versatile" />
+        <meta property="og:url" content="https://contentility.com" />
+        <meta property="og:type" content="website" />
       </head>
       <body className="antialiased">
         {children}
