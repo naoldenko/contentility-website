@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { LinkIcon, ArrowRightIcon, ArrowDownIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
@@ -132,6 +133,11 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-4 md:py-6 px-4 md:px-8 text-center text-white/60 border-t border-white/10 text-sm md:text-base">
         <p>© {new Date().getFullYear()} ContentilityAI. All rights reserved.</p>
+        <div className="mt-2 flex justify-center space-x-4">
+          <Link href="/privacy-policy" className="text-white/60 hover:text-white transition-colors">
+            Privacy Policy
+          </Link>
+        </div>
       </footer>
     </div>
   );
